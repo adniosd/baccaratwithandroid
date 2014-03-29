@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/background_screens">
+    <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/log_in"
+            android:id="@+id/textView"
+            android:layout_alignParentTop="true"
+            android:gravity="center_horizontal"
+            style="@style/TopElementDarkGreen"
+            android:textColor="@android:color/white"
+            android:textStyle="bold"
+            android:textSize="@dimen/text_size_top_elem" android:padding="5dp"/>
+    <RelativeLayout
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_centerInParent="true">
+        <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/etLogin_SL"
+                android:text="Dima200"
+                style="@style/EditTextWhiteLineBottom"
+                android:hint="@string/login"
+                android:layout_alignLeft="@+id/btnLogin_SL"
+                android:layout_alignRight="@+id/btnLogin_SL" android:textSize="@dimen/text_size_edit_text"
+                android:singleLine="true"/>
+        <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/etPass_SL"
+                style="@style/EditTextWhite"
+                android:text="200Dima"
+                android:inputType="textPassword"
+                android:hint="@string/password"
+                android:layout_below="@+id/etLogin_SL"
+                android:layout_alignRight="@+id/etLogin_SL"
+                android:layout_alignLeft="@+id/etLogin_SL" android:textSize="@dimen/text_size_edit_text"
+                android:singleLine="true"/>
+        <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/btnLogin_SL" style="@style/ButtonGreenWide"
+                android:layout_below="@+id/etPass_SL" android:layout_marginTop="15dp"
+                />
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/btnLogin_SL"
+                android:layout_alignLeft="@+id/btnLogin_SL"
+                android:layout_alignRight="@+id/btnLogin_SL"
+                android:layout_alignBottom="@+id/btnLogin_SL"
+                android:gravity="center"
+                android:text="@string/log_in"
+                android:textColor="@android:color/white"
+                android:textStyle="bold" android:textSize="@dimen/text_size_btn_login"/>
+        <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/forgot_password"
+                android:id="@+id/tvForgotPassword_SL"
+                android:layout_gravity="center_horizontal"
+                android:layout_below="@+id/btnLogin_SL"
+                android:layout_centerHorizontal="true"
+                style="@style/ButtonLinkTransparent" android:textSize="@dimen/text_size_btn_forgot_password"/>
+    </RelativeLayout>
+</RelativeLayout>

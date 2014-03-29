@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="color_gradient_array">
+        <item>#d50000</item>
+        <item>#db1300</item>
+        <item>#e32600</item>
+        <item>#ec3d00</item>
+        <item>#f55600</item>
+        <item>#fe7000</item>
+        <item>#ff8700</item>
+        <item>#ff9d00</item>
+        <item>#ffaf00</item>
+        <item>#ffbb00</item>
+        <item>#f6bd00</item>
+        <item>#e5bd00</item>
+        <item>#cfbd00</item>
+        <item>#b6bc00</item>
+        <item>#9ab600</item>
+        <item>#7dae00</item>
+        <item>#61a600</item>
+        <item>#469e00</item>
+        <item>#2d9600</item>
+        <item>#199000</item>
+    </array>
+</resources>

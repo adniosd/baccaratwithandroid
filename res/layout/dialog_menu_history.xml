@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/background_screens"
+        >
+
+    <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:gravity="center_vertical"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:background="@drawable/background_top_dark_green"
+            android:id="@+id/relativeLayout">
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/history_menu"
+                android:id="@+id/tvHistory_SMH"
+                android:layout_centerHorizontal="true"
+                android:layout_alignParentTop="true"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/up_dialog_menu_name_size"
+                android:layout_alignTop="@+id/btnCancelForHistory_SMH"
+                android:layout_alignBottom="@+id/btnCancelForHistory_SMH"
+                android:gravity="center_vertical|center_horizontal"
+                android:textIsSelectable="false"/>
+        <Button
+                android:layout_width="wrap_content"
+                android:layout_height="35dp"
+                android:text="@string/close"
+                android:id="@+id/btnCancelForHistory_SMH"
+                android:layout_alignParentRight="true"
+                style="@style/ButtonLinkTransparent"
+                android:textSize="@dimen/cancel_size"
+                android:textStyle="bold"
+                android:layout_alignParentTop="true"
+                android:paddingRight="5dp"/>
+    </RelativeLayout>
+    <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/scrollView" android:layout_below="@+id/relativeLayout"
+            >
+        <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" android:layout_below="@+id/relativeLayout"
+                android:paddingLeft="60dp" android:paddingTop="20dp" android:paddingRight="60dp"
+                android:paddingBottom="20dp">
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/game_history"
+                    android:id="@+id/tvGameHistory_SMH" android:textSize="@dimen/text_size_help_content"
+                    android:textColor="@android:color/white" android:paddingBottom="5dp" android:paddingTop="5dp"/>
+            <com.vivogaming.livecasino.screens.game.history.CustomViewHistory
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/cvhGameHistory"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentLeft="true"
+                        android:focusable="false"
+                        android:focusableInTouchMode="false"
+                    ></com.vivogaming.livecasino.screens.game.history.CustomViewHistory>
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/player_history"
+                    android:id="@+id/tvPlayerHistory_SMH" android:textSize="@dimen/text_size_help_content"
+                    android:textColor="@android:color/white" android:paddingTop="10dp" android:paddingBottom="5dp"/>
+            <com.vivogaming.livecasino.screens.game.history.CustomViewHistory
+                    android:layout_width="match_parent"
+                    android:layout_height="fill_parent"
+                    android:id="@+id/cvhPlayerHistory"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentLeft="true"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"
+                    ></com.vivogaming.livecasino.screens.game.history.CustomViewHistory>
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

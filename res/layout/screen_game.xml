@@ -1,0 +1,994 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rlRoot_SG"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_screens" >
+
+    <LinearLayout
+        android:id="@+id/lineVideo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/lineRoles_SG"
+        android:layout_alignParentLeft="true"
+        android:orientation="horizontal"
+        android:layout_below="@+id/rlUpper_SG"
+        android:layout_toLeftOf="@+id/rlRightPanel_SG" >
+    <SurfaceView
+        android:id="@+id/vvStreamVideo_SMG"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    </LinearLayout>
+    
+    <RelativeLayout
+        android:id="@+id/rlAboveVideo_SG"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/rlUpper_SG"
+        android:layout_toLeftOf="@+id/rlRightPanel_SG"
+        android:background="#00000000" >
+
+        <RelativeLayout
+            android:id="@+id/rlWinnerMessage_SG"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:background="@drawable/background_black_gold_stroke"
+            android:paddingBottom="@dimen/padding_win_notification_vertical"
+            android:paddingLeft="@dimen/padding_win_notification_horizontal"
+            android:paddingRight="@dimen/padding_win_notification_horizontal"
+            android:paddingTop="@dimen/padding_win_notification_vertical"
+            android:visibility="invisible" >
+
+            <TextView
+                android:id="@+id/tvYouWin_SG"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:text="@string/you_win_exclamation"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/text_size_you_win" />
+
+            <TextView
+                android:id="@+id/tvMessage_SG"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvYouWin_SG"
+                android:layout_centerHorizontal="true"
+                android:gravity="center"
+                android:text="$30"
+                android:textColor="@color/gold_text"
+                android:textSize="@dimen/text_size_toast_message"
+                android:textStyle="bold" />
+        </RelativeLayout>
+
+        <ProgressBar
+            android:id="@+id/pbVideoLoader_SG"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center_vertical"
+            android:indeterminateDrawable="@drawable/rotate_loader"
+            android:visibility="invisible" />
+    </RelativeLayout>
+
+    <!-- Sam -->
+	<!-- android:background="@drawable/background_rl_right_panel" -->
+    <RelativeLayout
+        android:id="@+id/rlRightPanel_SG"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/pbTimeProgress_SG"
+        android:background="@drawable/bg_rl_right_panel"
+        android:padding="@dimen/padding_rlRightPanel" >
+
+        <com.vivogaming.livecasino.screens.game.ChipsRadioGroup
+            android:id="@+id/rgChips_GS"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true" >
+
+            <TableRow
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" >
+
+                <RadioButton
+                    android:id="@+id/rbChip1_SG"
+                    style="@style/Chip1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/rlUpper_SG" />
+
+                <RadioButton
+                    android:id="@+id/rbChip5_SG"
+                    style="@style/Chip5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" >
+
+                <RadioButton
+                    android:id="@+id/rbChip10_SG"
+                    style="@style/Chip10"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <RadioButton
+                    android:id="@+id/rbChip25_SG"
+                    style="@style/Chip25"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" >
+
+                <RadioButton
+                    android:id="@+id/rbChip100_SG"
+                    style="@style/Chip100"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <RadioButton
+                    android:id="@+id/rbChip500_SG"
+                    style="@style/Chip500"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center" >
+
+                <RadioButton
+                    android:id="@+id/rbChip1000_SG"
+                    style="@style/Chip1000"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </TableRow>
+        </com.vivogaming.livecasino.screens.game.ChipsRadioGroup>
+
+        <LinearLayout
+            android:id="@+id/rlCurrentBet_SG"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/btnConfirm_SG"
+            android:layout_alignLeft="@+id/btnConfirm_SG"
+            android:layout_alignRight="@+id/btnConfirm_SG"
+            android:background="@drawable/background_current_bet"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/tvCurrentBet_SG"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="left"
+                android:layout_marginLeft="@dimen/margin_left_bet"
+                android:layout_marginTop="@dimen/margin_top_bet"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:text="@string/current_bet"
+                android:textColor="@color/gold_text"
+                android:textSize="@dimen/text_size_current_bet"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvBetCount_SG"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/tvCurrentBet_SG"
+                android:layout_marginLeft="@dimen/margin_left_bet"
+                android:layout_marginBottom="@dimen/margin_bottom_bet"
+                android:layout_weight="2"
+                android:gravity="center_vertical"
+                android:text="$ 0"
+                android:textColor="@color/gold_text"
+                android:textSize="@dimen/text_size_current_bet_count"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <ImageButton
+            android:id="@+id/btnConfirm_SG"
+            style="@style/ButtonConfirm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/btnUndo_SG"
+            android:layout_marginBottom="@dimen/margin_btn_confirm"
+            android:layout_marginTop="@dimen/margin_btn_confirm" />
+
+        <RelativeLayout
+            android:id="@+id/rlBtnConfirm_SG"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignBottom="@+id/btnConfirm_SG"
+            android:layout_alignLeft="@+id/btnConfirm_SG"
+            android:layout_alignRight="@+id/btnConfirm_SG"
+            android:layout_alignTop="@+id/btnConfirm_SG" >
+
+            <TextView
+                android:id="@+id/tvBtnConfirm_SG"
+                style="@style/TextConfirmButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="@string/confirm" />
+        </RelativeLayout>
+
+        <ImageButton
+            android:id="@+id/btnUndo_SG"
+            style="@style/ButtonUndo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignRight="@+id/btnConfirm_SG" />
+
+        <RelativeLayout
+            android:id="@+id/rlBtnUndo_SG"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/btnUndo_SG"
+            android:layout_alignLeft="@+id/btnUndo_SG"
+            android:layout_alignRight="@+id/btnUndo_SG"
+            android:layout_alignTop="@+id/btnUndo_SG" >
+
+            <TextView
+                android:id="@+id/tvBtnUndo_SG"
+                style="@style/TextUndoButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="@string/undo" />
+        </RelativeLayout>
+
+        <ImageButton
+            android:id="@+id/btnRepeat_SG"
+            style="@style/ButtonRepeat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignRight="@+id/btnConfirm_SG"
+            android:layout_below="@+id/btnConfirm_SG"
+            android:visibility="invisible" />
+
+        <RelativeLayout
+            android:id="@+id/rlBtnRepeat_SG"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/btnRepeat_SG"
+            android:layout_alignLeft="@+id/btnRepeat_SG"
+            android:layout_alignRight="@+id/btnRepeat_SG"
+            android:layout_alignTop="@+id/btnRepeat_SG"
+            android:visibility="invisible" >
+
+            <TextView
+                android:id="@+id/tvBtnRepeat_SG"
+                style="@style/TextRepeatButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:drawableLeft="@null"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:text="@string/repeat_bet" />
+        </RelativeLayout>
+    </RelativeLayout>
+    <!-- Sam -->
+
+    <ProgressBar
+        android:id="@+id/pbTimeProgress_SG"
+        style="@android:style/Widget.DeviceDefault.Light.ProgressBar.Horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/rlUpper_SG"
+        android:maxHeight="3dp"
+        android:progress="100"
+        android:progressDrawable="@drawable/background_pb_game_time" />
+
+    <RelativeLayout
+        android:id="@+id/rlBlock_SG"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/rlRightPanel_SG"
+        android:layout_alignLeft="@+id/rlRightPanel_SG"
+        android:layout_alignRight="@+id/rlRightPanel_SG"
+        android:layout_alignTop="@+id/rlRightPanel_SG"
+        android:background="@color/semitransparent_grey"
+        android:clickable="true"
+        android:visibility="invisible" >
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/llSlidingMenus_SG"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/top_head_menu_SG"
+        android:layout_toLeftOf="@id/rlRightPanel_SG"
+        android:visibility="visible" >
+
+        <RelativeLayout
+            android:id="@+id/rlRightSlidingMenu_SG"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/background_right_sliding_menu"
+            android:paddingBottom="5dp"
+            android:paddingRight="8dp"
+            android:paddingTop="5dp" >
+
+            <ImageView
+                android:id="@+id/ivCloseRightMenu_SG"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="false"
+                android:layout_centerVertical="true"
+                android:paddingBottom="15dp"
+                android:paddingLeft="8dp"
+                android:paddingRight="5dp"
+                android:paddingTop="15dp"
+                android:src="@drawable/arrow" />
+
+            <TextView
+                android:id="@+id/tvLimitsRightPanel_SG"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_toRightOf="@id/ivCloseRightMenu_SG"
+                android:text="@string/limits"
+                android:textColor="@color/gold_text"
+                android:textSize="@dimen/text_size_right_panel" />
+
+            <TextView
+                android:id="@+id/tvLimitsValueRightPanel_SG"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvLimitsRightPanel_SG"
+                android:layout_toRightOf="@id/ivCloseRightMenu_SG"
+                android:text="-"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/text_size_right_panel" />
+
+            <TextView
+                android:id="@+id/tvLastBetRightPanel_SG"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvLimitsValueRightPanel_SG"
+                android:layout_toRightOf="@id/ivCloseRightMenu_SG"
+                android:text="@string/last_bet"
+                android:textColor="@color/gold_text"
+                android:textSize="@dimen/text_size_right_panel" />
+
+            <TextView
+                android:id="@+id/tvLastBetValueRightPanel_SG"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvLastBetRightPanel_SG"
+                android:layout_toRightOf="@id/ivCloseRightMenu_SG"
+                android:text="-"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/text_size_right_panel" />
+
+            <TextView
+                android:id="@+id/tvBetRightPanel_SG"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvLastBetValueRightPanel_SG"
+                android:layout_toRightOf="@id/ivCloseRightMenu_SG"
+                android:text="@string/bet"
+                android:textColor="@color/gold_text"
+                android:textSize="@dimen/text_size_right_panel" />
+
+            <TextView
+                android:id="@+id/tvBetValueRightPanel_SG"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvBetRightPanel_SG"
+                android:layout_toRightOf="@id/ivCloseRightMenu_SG"
+                android:text="-"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/text_size_right_panel" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rlLeftPanelGrid_SG"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/rlRightSlidingMenu_SG"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginRight="@dimen/margin_sliding_menu"
+            android:layout_toLeftOf="@id/rlRightSlidingMenu_SG"
+            android:background="@drawable/background_left_sliding_menu" >
+
+            <ImageView
+                android:id="@+id/ivCloseLeftMenu_GS"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:paddingBottom="15dp"
+                android:paddingRight="5dp"
+                android:paddingTop="15dp"
+                android:src="@drawable/history" />
+
+            <com.vivogaming.livecasino.screens.game.history.CustomViewScore
+                android:id="@+id/cgHistory_GS"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_toLeftOf="@id/ivCloseLeftMenu_GS"
+                android:focusable="false"
+                android:focusableInTouchMode="false" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/top_head_menu_SG"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rlUpper_SG"
+        android:layout_marginBottom="3dp"
+        android:layout_toLeftOf="@+id/rlRightPanel_SG"
+        android:background="@color/menu_light_white"
+        android:orientation="horizontal"
+        android:paddingBottom="1dp"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:paddingTop="3dp"
+        android:visibility="invisible" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <Button
+                android:id="@+id/btnLimits_SG"
+                style="@style/ButtonLimits"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="4"
+                android:background="@android:color/transparent"
+                android:gravity="center_horizontal|bottom"
+                android:text="@string/limits_menu"
+                android:textSize="@dimen/text_size_menu" />
+
+            <Button
+                android:id="@+id/btnHistory_SG"
+                style="@style/ButtonHistory"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="4"
+                android:background="@android:color/transparent"
+                android:gravity="center_horizontal|bottom"
+                android:text="@string/history_menu"
+                android:textSize="@dimen/text_size_menu" />
+
+            <Button
+                android:id="@+id/btnSettings_SG"
+                style="@style/ButtonSetting"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:background="@android:color/transparent"
+                android:gravity="center_horizontal|bottom"
+                android:text="@string/settings_menu"
+                android:textSize="@dimen/text_size_menu" />
+
+            <Button
+                android:id="@+id/btnHelp_SG"
+                style="@style/ButtonHelp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="4"
+                android:background="@android:color/transparent"
+                android:gravity="center_horizontal|bottom"
+                android:text="@string/help_menu"
+                android:textSize="@dimen/text_size_menu" />
+
+            <Button
+                android:id="@+id/btnLobby_SG"
+                style="@style/ButtonLobby"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="4"
+                android:background="@android:color/transparent"
+                android:gravity="center_horizontal|bottom"
+                android:text="@string/lobby_menu"
+                android:textSize="@dimen/text_size_menu" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/top_head_menu_money_SG"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rlUpper_SG"
+        android:background="@drawable/tip_plate"
+        android:focusableInTouchMode="false"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:padding="7dp"
+        android:visibility="invisible" >
+
+        <TextView
+            android:id="@+id/tvTIP_SG"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical|center_horizontal"
+            android:paddingTop="15dp"
+            android:text="@string/tip"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/text_size_tip" />
+
+        <ImageButton
+            android:id="@+id/btnTipChip1_SG"
+            style="@style/TIPChip1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent" />
+
+        <ImageButton
+            android:id="@+id/btnTipChip5_SG"
+            style="@style/TIPChip5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <ImageButton
+            android:id="@+id/btnTipChip10_SG"
+            style="@style/TIPChip10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <ImageButton
+            android:id="@+id/btnTipChip25_SG"
+            style="@style/TIPChip25"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/rlUpper_SG"
+        style="@style/TopElementDarkGreen"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true" >
+
+        <ImageButton
+            android:id="@+id/btnMenu_GS"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/btn_menu" />
+
+        <ImageButton
+            android:id="@+id/btnMoneyMenu_GS"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/btnMenu_GS"
+            android:background="@drawable/btn_menu_money" />
+
+        <RelativeLayout
+            android:id="@+id/rlBetsStatusAndTimer_GS"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            >
+<!-- android:layout_marginLeft="20dp" -->
+<!-- android:layout_toRightOf="@+id/btnMoneyMenu_GS" -->
+            <TextView
+                android:id="@+id/tvBetAction_SG"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:text="@string/place_your_bets"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/text_size_top_elem" />
+
+            <TextView
+                android:id="@+id/tvTimer_GS"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/tvBetAction_SG"
+                android:text="0 sec"
+                android:textColor="#d50000"
+                android:layout_alignBottom="@+id/tvBetAction_SG"
+                android:textSize="@dimen/text_size_top_elem" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tvBalance_SG"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="15dp"
+            android:layout_toLeftOf="@+id/btnCashier_SG"
+            android:gravity="center_horizontal"
+            android:text="@string/balance_colon"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/text_size_balance"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/btnCashier_SG"
+            style="@style/ButtonCashier"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="15dp"
+            android:text="@string/cashier"
+            android:textSize="@dimen/text_size_btn_cashier" />
+    </RelativeLayout>
+    
+    <ImageView
+        android:id="@+id/ivPlayer_SG"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/rlRightPanel_SG"
+        android:layout_marginBottom="40dp"
+        android:layout_marginLeft="89dp"
+        android:src="@drawable/player" />
+
+    <ImageView
+        android:id="@+id/ivPlayerPair_SG"
+        android:layout_width="60dp"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/ivTie_SG"
+        android:layout_marginBottom="20dp"
+        android:layout_marginLeft="45dp"
+        android:src="@drawable/player_pair" />
+
+    <ImageView
+        android:id="@+id/ivTie_SG"
+        android:layout_width="55dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/rlRightPanel_SG"
+        android:layout_marginLeft="229dp"
+        android:scaleType="fitEnd"
+        android:src="@drawable/tie" />
+
+    <ImageView
+        android:id="@+id/ivBankerPair_SG"
+        android:layout_width="60dp"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/ivTie_SG"
+        android:layout_marginBottom="18dp"
+        android:layout_marginRight="15dp"
+        android:layout_toLeftOf="@+id/rlRightPanel_SG"
+        android:src="@drawable/banker_pair" />
+
+    <ImageView
+        android:id="@+id/ivBanker_SG"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/rlRightPanel_SG"
+        android:layout_marginBottom="35dp"
+        android:layout_marginRight="50dp"
+        android:layout_toLeftOf="@+id/rlRightPanel_SG"
+        android:src="@drawable/banker" />
+    
+    <!-- test code -->
+	<!-- write by Sam -->
+    <LinearLayout
+        android:id="@+id/lineRoles_SG"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/height_footer_box"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignRight="@+id/llSlidingMenus_SG"
+        android:background="@color/black"
+        android:baselineAligned="false"
+        android:orientation="horizontal" >
+
+        <RelativeLayout
+            android:id="@+id/rlPlayerPair_SG"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/height_footer_whiteline"
+                android:layout_alignParentTop="true"
+                android:background="#C8C8C8" >
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/tvPlayerPairTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/tv_players"
+                android:gravity="center"
+                android:text="@string/text_footerbox_title_player_pair"
+                android:textColor="#FFFFFF"
+                android:textSize="@dimen/text_size_footer_title" />
+
+            <TextView
+                android:id="@+id/tvPlayerPairValue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvPlayerPairTitle"
+                android:layout_centerHorizontal="true"
+                android:gravity="center"
+                android:paddingTop="@dimen/padding_top_foot_value"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/text_size_footer_value" />
+
+            <ImageView
+                android:id="@+id/chipsPlayerPair_SG"
+                android:layout_width="@dimen/width_footer_chip_tray"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="@dimen/margin_right_chip_tray"
+                android:paddingLeft="@dimen/padding_left_footer_chip_tray"
+                >
+            </ImageView>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rlPlayer_SG"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/background_rl" >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/height_footer_whiteline"
+                android:layout_alignParentTop="true"
+                android:background="#C8C8C8" >
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/tvPlayerTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/tv_players"
+                android:gravity="center"
+                android:text="@string/text_footerbox_title_player"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/text_size_footer_title" />
+
+            <TextView
+                android:id="@+id/tvPlayerValue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvPlayerTitle"
+                android:paddingTop="@dimen/padding_top_foot_value"
+                android:layout_centerHorizontal="true"
+                android:gravity="center"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/text_size_footer_value" />
+
+            <ImageView
+                android:id="@+id/chipsPlayer_SG"
+                android:layout_width="@dimen/width_footer_chip_tray"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="@dimen/margin_right_chip_tray"
+                android:paddingLeft="@dimen/padding_left_footer_chip_tray"
+                >
+            </ImageView>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rlTie_SG"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1" >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/height_footer_whiteline"
+                android:layout_alignParentTop="true"
+                android:background="#C8C8C8" >
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/tvTieTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/tv_players"
+                android:gravity="center"
+                android:text="@string/text_footerbox_title_tie"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/text_size_footer_title" />
+
+            <TextView
+                android:id="@+id/tvTieValue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvTieTitle"
+                android:layout_centerHorizontal="true"
+                android:gravity="center"
+                android:paddingTop="@dimen/padding_top_foot_value"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/text_size_footer_value" />
+
+            <ImageView
+                android:id="@+id/chipsTie_SG"
+                android:layout_width="@dimen/width_footer_chip_tray"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="@dimen/margin_right_chip_tray"
+                android:paddingLeft="@dimen/padding_left_footer_chip_tray"
+                >
+            </ImageView>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rlBanker_SG"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/background_rl" >
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/height_footer_whiteline"
+                android:layout_alignParentTop="true"
+                android:background="#C8C8C8" >
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/tvBankerTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/tv_players"
+                android:gravity="center"
+                android:text="@string/text_footerbox_title_banker"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/text_size_footer_title" />
+
+            <TextView
+                android:id="@+id/tvBankerValue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvBankerTitle"
+                android:layout_centerHorizontal="true"
+                android:gravity="center"
+                android:paddingTop="@dimen/padding_top_foot_value"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/text_size_footer_value" />
+
+            <ImageView
+                android:id="@+id/chipsBanker_SG"
+                android:layout_width="@dimen/width_footer_chip_tray"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="@dimen/margin_right_chip_tray"
+                android:paddingLeft="@dimen/padding_left_footer_chip_tray"
+                >
+            </ImageView>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rlBankerPair_SG"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1" >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/height_footer_whiteline"
+                android:layout_alignParentTop="true"
+                android:background="#C8C8C8" >
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/tvBankerPairTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/tv_players"
+                android:gravity="center"
+                android:text="@string/text_footerbox_title_banker_pair"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/text_size_footer_title" />
+
+            <TextView
+                android:id="@+id/tvBankerPairValue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvBankerPairTitle"
+                android:layout_centerHorizontal="true"
+                android:gravity="center"
+                android:paddingTop="@dimen/padding_top_foot_value"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/text_size_footer_value" />
+
+            <ImageView
+                android:id="@+id/chipsBankerPair_SG"
+                android:layout_width="@dimen/width_footer_chip_tray"
+                android:layout_height="fill_parent"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="@dimen/margin_right_chip_tray"
+                android:paddingLeft="@dimen/padding_left_footer_chip_tray"
+                >
+            </ImageView>
+        </RelativeLayout>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignRight="@+id/llSlidingMenus_SG"
+        android:background="#282828" >
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/lineWinner"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/lineRoles_SG"
+        android:layout_marginBottom="@dimen/margin_bottom_winner_boxLine"
+        android:layout_alignRight="@+id/lineRoles_SG" >
+
+        <ImageView
+            android:id="@+id/ivPlayerPairwin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@drawable/win" 
+            android:visibility="invisible" />
+
+        <ImageView
+            android:id="@+id/ivPlayerwin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@drawable/win"
+            android:visibility="invisible" />
+
+        <ImageView
+            android:id="@+id/ivTiewin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@drawable/win"
+            android:visibility="invisible" />
+
+        <ImageView
+            android:id="@+id/ivBankerwin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@drawable/win"
+            android:visibility="invisible" />
+
+        <ImageView
+            android:id="@+id/ivBankerPairwin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@drawable/win"
+            android:visibility="invisible" />
+    </LinearLayout>
+    <!-- test code -->
+
+</RelativeLayout>

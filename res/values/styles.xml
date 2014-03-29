@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Baccarat" parent="android:Theme.Holo.Light.NoActionBar.Fullscreen"/>
+
+    <style name="EmptyImageView">
+        <item name="android:adjustViewBounds">true</item>
+        <item name="android:scaleType">fitXY</item>
+        <item name="android:background">#00000000</item>
+    </style>
+
+    <style name="ButtonGreenWide">
+        <item name="android:background">@drawable/background_btn_green_wide</item>
+    </style>
+
+    <style name="ButtonGreenContact">
+        <item name="android:background">@drawable/background_btn_green_contact</item>
+    </style>
+
+    <style name="ButtonChooseCountry">
+        <item name="android:background">@drawable/white_board</item>
+    </style>
+
+    <style name="ButtonGreenNarrow">
+        <item name="android:background">@drawable/background_btn_green_narrow</item>
+    </style>
+
+    <style name="ButtonWhiteWide">
+        <item name="android:background">@drawable/background_btn_white_wide</item>
+    </style>
+
+    <style name="ButtonCashier">
+        <item name="android:background">@drawable/background_btn_cashier</item>
+        <item name="android:textColor">@color/dark_green</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:minHeight">0dp</item>
+        <item name="android:padding">1dp</item>
+    </style>
+
+    <style name="EditTextWhite">
+        <item name="android:background">@drawable/background_edit_text</item>
+        <item name="android:paddingLeft">@dimen/padding_left_edit_text</item>
+        <item name="android:textColorHint">@android:color/darker_gray</item>
+        <item name="android:imeOptions">flagNoExtractUi</item>
+    </style>
+
+    <style name="EditTextWhiteLineBottom">
+        <item name="android:background">@drawable/background_edit_text_line_bottom</item>
+        <item name="android:paddingLeft">@dimen/padding_left_edit_text</item>
+        <item name="android:textColorHint">@android:color/darker_gray</item>
+        <item name="android:imeOptions">flagNoExtractUi</item>
+    </style>
+
+    <style name="EditTextWhiteLineBottomRegister">
+        <item name="android:background">@drawable/background_edit_text_line_bottom_register</item>
+        <item name="android:paddingLeft">@dimen/padding_left_edit_text</item>
+        <item name="android:textColorHint">@android:color/darker_gray</item>
+        <item name="android:textSize">@dimen/text_edit_text_register</item>
+        <item name="android:layout_gravity">center_horizontal</item>
+        <item name="android:layout_alignLeft">@id/ib_country_SR</item>
+        <item name="android:layout_alignRight">@id/ib_country_SR</item>
+        <item name="android:imeOptions">flagNoExtractUi</item>
+        <item name="android:singleLine">true</item>
+    </style>
+
+    <style name="EditTextGreenContacts">
+        <item name="android:background">@drawable/background_et_contact</item>
+        <item name="android:paddingLeft">@dimen/padding_left_edit_text</item>
+        <item name="android:textColorHint">@color/gray_et_contacts</item>
+        <item name="android:textSize">@dimen/text_size_dealer_name</item>
+        <item name="android:layout_marginBottom">10dp</item>
+        <item name="android:layout_marginTop">10dp</item>
+        <item name="android:layout_gravity">center_horizontal</item>
+        <item name="android:layout_alignLeft">@id/btSend_DHM</item>
+        <item name="android:layout_alignRight">@id/btSend_DHM</item>
+    </style>
+
+    <style name="TextViewWhiteText">
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">@dimen/text_edit_text_register</item>
+    </style>
+
+    <style name="TopElementDarkGreen">
+        <item name="android:background">@drawable/background_top_dark_green</item>
+    </style>
+
+    <style name="ButtonLinkTransparent">
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:textSize">@dimen/text_size_link</item>
+        <item name="android:textColor">@drawable/color_state_list_green_white</item>
+    </style>
+
+    <style name="ButtonConfirm">
+        <item name="android:background">@drawable/background_btn_confirm</item>
+        <item name="android:scaleType">fitXY</item>
+    </style>
+
+    <style name="ButtonUndo">
+        <item name="android:background">@drawable/background_btn_undo</item>
+        <item name="android:scaleType">fitXY</item>
+    </style>
+
+    <style name="ButtonRepeat">
+        <item name="android:background">@drawable/background_btn_repeat</item>
+        <item name="android:scaleType">fitXY</item>
+    </style>
+
+    <style name="Chip1">
+        <item name="android:background">@drawable/background_cb_chip1</item>
+        <item name="android:button">@null</item>
+    </style>
+
+    <style name="Chip5">
+        <item name="android:background">@drawable/background_cb_chip5</item>
+        <item name="android:button">@null</item>
+    </style>
+
+    <style name="Chip10">
+        <item name="android:background">@drawable/background_cb_chip10</item>
+        <item name="android:button">@null</item>
+    </style>
+
+    <style name="Chip25">
+        <item name="android:background">@drawable/background_cb_chip25</item>
+        <item name="android:button">@null</item>
+    </style>
+
+    <style name="Chip100">
+        <item name="android:background">@drawable/background_cb_chip100</item>
+        <item name="android:button">@null</item>
+    </style>
+
+    <style name="Chip500">
+        <item name="android:background">@drawable/background_cb_chip500</item>
+        <item name="android:button">@null</item>
+    </style>
+
+    <style name="Chip1000">
+        <item name="android:background">@drawable/background_cb_chip1000</item>
+        <item name="android:button">@null</item>
+    </style>
+
+    <style name="ButtonLimits">
+        <item name="android:drawableTop"> @drawable/background_btn_green_limits</item>
+        <item name="android:textColor"> @drawable/color_lightgreen</item>
+        <item name="android:singleLine">true</item>
+    </style>
+
+    <style name="ButtonHistory">
+        <item name="android:drawableTop">@drawable/background_btn_green_history</item>
+        <item name="android:textColor"> @drawable/color_lightgreen</item>
+        <item name="android:singleLine">true</item>
+    </style>
+
+    <style name="ButtonLobby">
+        <item name="android:drawableTop"> @drawable/background_btn_green_lobbi</item>
+        <item name="android:textColor"> @drawable/color_lightgreen</item>
+        <item name="android:singleLine">true</item>
+    </style>
+
+    <style name="ButtonHelp">
+        <item name="android:drawableTop">@drawable/background_btn_green_help</item>
+        <item name="android:textColor"> @drawable/color_lightgreen</item>
+        <item name="android:singleLine">true</item>
+    </style>
+
+    <style name="ButtonSetting">
+        <item name="android:drawableTop">@drawable/background_btn_green_setting</item>
+        <item name="android:textColor"> @drawable/color_lightgreen</item>
+        <item name="android:singleLine">true</item>
+    </style>
+
+    <style name="TIPChip1">
+        <item name="android:src">@drawable/background_btn_chip1_pressed</item>
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:button">@null</item>
+    </style>
+
+    <style name="TIPChip5">
+        <item name="android:src">@drawable/background_btn_chip5_pressed</item>
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:button">@null</item>
+    </style>
+
+    <style name="TIPChip10">
+        <item name="android:src">@drawable/background_btn_chip10_pressed</item>
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:button">@null</item>
+    </style>
+
+    <style name="TIPChip25">
+        <item name="android:src">@drawable/background_btn_chip25_pressed</item>
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:button">@null</item>
+    </style>
+	
+	 <style name="MenuContentThemes" >
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:backgroundDimEnabled">true</item>
+    </style>
+
+    <style name="SwitchThemes">
+        <item name="android:thumb">@drawable/dialog_settings_switch_thumb</item>
+        <item name="android:track">@drawable/dialog_settings_switch_track_off</item>
+    </style>
+
+    <style name="DialogWithoutTitle" parent="android:style/Theme.Holo.Dialog">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+    </style>
+
+    <style name="ButtonWhiteRegister">
+        <item name="android:background">@drawable/background_edit_text_line_bottom_register</item>
+    </style>
+
+    <style name="TextViewTitleDialog">
+        <item name="android:textSize">@dimen/text_size_dialog_title</item>
+        <item name="android:textColor">@color/light_green</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:layout_marginBottom">@dimen/margin_bottom_title_dialog</item>
+    </style>
+
+    <style name="TextViewMessageDialog">
+        <item name="android:textSize">@dimen/text_size_dialog_message</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:layout_marginBottom">@dimen/margin_bottom_message_dialog</item>
+    </style>
+
+    <style name="TextViewBtnDialog">
+        <item name="android:textSize">@dimen/text_size_dialog_button</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="BackgroundDarkGreenDialog">
+        <item name="android:background">@drawable/background_dialog_dark_green</item>
+        <item name="android:paddingBottom">12dp</item>
+        <item name="android:paddingLeft">15dp</item>
+        <item name="android:paddingTop">8dp</item>
+        <item name="android:paddingRight">15dp</item>
+    </style>
+
+    <style name="TextConfirmButton">
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">@dimen/text_size_btn_confirm</item>
+        <item name="android:gravity">center</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:drawableLeft">@drawable/ic_confirm</item>
+        <item name="android:drawablePadding">@dimen/padding_drawable_button</item>
+    </style>
+
+    <style name="TextUndoButton">
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">@dimen/text_size_btn_undo</item>
+        <item name="android:gravity">center</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:drawableLeft">@drawable/ic_undo</item>
+        <item name="android:drawablePadding">@dimen/padding_drawable_button</item>
+    </style>
+
+    <style name="TextRepeatButton">
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">@dimen/text_size_btn_repeat</item>
+        <item name="android:gravity">center</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:drawableLeft">@drawable/ic_repeat</item>
+        <item name="android:drawablePadding">@dimen/padding_drawable_button</item>
+    </style>
+</resources>

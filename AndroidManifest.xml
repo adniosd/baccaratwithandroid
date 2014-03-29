@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          package="com.vivogaming.livecasino"
+          android:installLocation="preferExternal"
+          android:versionCode="1"
+          android:versionName="1.2">
+    <uses-sdk android:minSdkVersion="15"/>
+
+    <uses-permission android:name="android.permission.WRITE_SETTINGS"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+
+    <application android:name=".global.BaccaratApp"
+            android:label="@string/app_name"
+                 android:theme="@style/Baccarat">
+
+        <activity android:name=".screens.Start"
+                  android:label="@string/app_name"
+                  android:launchMode="singleTask"
+                  android:screenOrientation="sensorLandscape">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".screens.Login"
+                  android:launchMode="singleTask"
+                  android:screenOrientation="sensorLandscape"/>
+
+        <activity android:name=".screens.register.Register"
+                  android:launchMode="singleTask"
+                  android:screenOrientation="sensorLandscape">
+
+        </activity>
+
+        <activity android:name=".screens.game.Game"
+                  android:launchMode="singleTask"
+                  android:screenOrientation="sensorLandscape">
+
+         </activity>
+
+        <activity android:name=".screens.choose_table.ChooseTable"
+                  android:launchMode="singleTask"
+                  android:screenOrientation="sensorLandscape"/>
+
+        <activity android:name=".roulette.GameRoulette"
+                  android:launchMode="singleTask"
+                  android:screenOrientation="sensor"/>
+    </application>
+</manifest>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="dark_green">#212E2A</color>
+    <color name="bgrnd_dark_green">#495853</color>
+    <color name="light_green">#2EA76E</color>
+    <color name="btn_cashier_pressed">#35AB4B</color>
+    <color name="gray_light">#ff8e8e8e</color>
+    <color name="white_grey">#f4f3eb</color>
+    <color name="red">#ffFF6060</color>
+    <color name="light_red">#ffffb0af</color>
+    <color name="dark_blue">#ff78b0e1</color>
+    <color name="light_blue">#ffb6d4ee</color>
+    <color name="dark_green_CS">#ff7ad775</color>
+    <color name="light_green_CS">#ffd2f3d0</color>
+    <color name="black">#ff000000</color>
+    <color name="gold_text">#D3B454</color>
+    <!-- <color name="gold_text">#D3B454</color> -->
+    <color name="menu_light_white">#99ffffff</color>
+	<color name="setting_rectangle_background">#20000000</color>
+    <color name="setting_rectangle_border">#28000000</color>
+    <color name="setting_white_lite">#25ffffff</color>
+    <color name="dark_green_setting_volume">#ff7ad775</color>
+    <color name="dark_green_setting_volume_progres">#ffbdbcb9</color>
+    <color name="switch_thumb_red">#ff4000</color>
+    <color name="darker_gray">#aaa</color>
+    <color name="transparent">#70ffffff</color>
+    <color name="semitransparent_grey">#88999999</color>
+    <color name="green_deep">#2EA76E</color>
+    <color name="white_white">#70ffffff</color>
+    <color name="gray_et_contacts">#7F7F7F</color>
+    <color name="green_bt_send">#00CC66</color>
+    <color name="grey">#999999</color>
+    <color name="winner_yellow">#FFDE59</color>
+</resources>

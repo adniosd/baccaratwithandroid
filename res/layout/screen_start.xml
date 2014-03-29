@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent" android:background="@drawable/background_screens"
+              android:gravity="center">
+    <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+        <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/EmptyImageView" android:src="@drawable/vivo_gaming"
+                android:layout_centerHorizontal="true" android:id="@+id/ivLogoVivoGaming_SS"
+                android:layout_marginBottom="10dp"/>
+        <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/EmptyImageView" android:src="@drawable/live_casino"
+                android:layout_centerHorizontal="true" android:id="@+id/ivLogoLiveCasino_SS"
+                android:layout_below="@+id/ivLogoVivoGaming_SS" android:layout_marginBottom="30dp"/>
+        <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/btnLogin_SS" style="@style/ButtonGreenWide"
+                android:layout_below="@+id/ivLogoLiveCasino_SS" android:layout_marginBottom="5dp"/>
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/log_in" android:textColor="@android:color/white" android:textStyle="bold"
+                android:layout_alignTop="@+id/btnLogin_SS" android:layout_alignBottom="@+id/btnLogin_SS"
+                android:layout_alignLeft="@+id/btnLogin_SS" android:layout_alignRight="@+id/btnLogin_SS"
+                android:gravity="center" android:textSize="@dimen/text_size_btn_login"/>
+        <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/btnSingUp_SS" style="@style/ButtonWhiteWide"
+                android:layout_below="@+id/btnLogin_SS"/>
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/sign_up" android:textColor="@color/dark_green" android:textStyle="bold"
+                android:layout_alignRight="@+id/btnSingUp_SS"
+                android:layout_alignBottom="@+id/btnSingUp_SS" android:layout_alignTop="@+id/btnSingUp_SS"
+                android:layout_alignLeft="@+id/btnSingUp_SS" android:gravity="center"
+                android:textSize="@dimen/text_size_btn_register"/>
+    </RelativeLayout>
+
+</LinearLayout>
+

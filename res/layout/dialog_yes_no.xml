@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content" style="@style/BackgroundDarkGreenDialog">
+
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tvTitle_DYN" android:layout_centerHorizontal="true" android:layout_alignParentTop="true"
+            android:text="-" style="@style/TextViewTitleDialog"/>
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="-"
+            android:id="@+id/tvMessage_DYN" android:layout_centerHorizontal="true" android:layout_below="@+id/tvTitle_DYN"
+            style="@style/TextViewMessageDialog"/>
+    <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/rlBtns_DYN"
+            android:layout_centerHorizontal="true" android:layout_below="@+id/tvMessage_DYN"
+            android:layout_marginLeft="20dp" android:layout_marginRight="20dp">
+        <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/btnNegative_DYN" style="@style/ButtonUndo" android:layout_marginRight="8dp"/>
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tvBtnNegative_DYN" android:layout_alignTop="@+id/btnNegative_DYN"
+                android:layout_alignLeft="@+id/btnNegative_DYN" android:layout_alignBottom="@+id/btnNegative_DYN"
+                android:layout_alignRight="@+id/btnNegative_DYN" style="@style/TextViewBtnDialog"/>
+        <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/btnPositive_DYN"
+                android:layout_toRightOf="@+id/btnNegative_DYN" style="@style/ButtonGreenNarrow"
+                android:layout_marginLeft="8dp"/>
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tvBtnPositive_DYN" android:layout_alignTop="@+id/btnPositive_DYN"
+                android:layout_alignLeft="@+id/btnPositive_DYN" android:layout_alignBottom="@+id/btnPositive_DYN"
+                android:layout_alignRight="@+id/btnPositive_DYN" style="@style/TextViewBtnDialog"/>
+    </RelativeLayout>
+</RelativeLayout>

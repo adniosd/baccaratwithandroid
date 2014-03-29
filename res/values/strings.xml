@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Baccarat</string>
+    <string name="loading...">Loading...</string>
+    <string name="log_in">Log In</string>
+    <string name="join_us">Join Us</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="login">Login</string>
+    <string name="password">Password</string>
+    <string name="forgot_password">Forgot password?</string>
+    <string name="play">Play</string>
+    <string name="limits">Limits:</string>
+    <string name="welcome">Welcome</string>
+    <string name="log_out">Log Out</string>
+    <string name="location">Location</string>
+    <string name="personal">Personal</string>
+    <string name="user_name">User Name</string>
+    <string name="email">Enter you email</string>
+    <string name="first_name">First name</string>
+    <string name="last_name">Last name</string>
+    <string name="birth_date">Birth date</string>
+    <string name="contacts">Contacts</string>
+    <string name="mobile">Mobile number</string>
+    <string name="street">Street</string>
+    <string name="city">City</string>
+    <string name="postal">Postal code</string>
+    <string name="regional">Regional</string>
+    <string name="gender_picker">Pick your gender, please:</string>
+    <string name="gender_button">Gender</string>
+    <string name="language">Language</string>
+    <string name="currency">Currency</string>
+    <string name="security">Security</string>
+    <string name="terms_and_conditions">Terms &amp; conditions</string>
+    <string name="register">Register</string>
+    <string name="agree">I agree to terms &amp; conditions</string>
+    <string name="country_of_residents">Country of residents:</string>
+    <string name="choose_country">Choose country</string>
+    <string name="retype_password">Retype password</string>
+    <string name="fill_all">Fill all fields</string>
+    <string name="check_pass">Check your password</string>
+    <string name="length_username">Your username must be between 8 and 20 characters and can contains latter, number and underscores.</string>
+    <string name="length_password">Create a password 8-40 characters. Make it quessproof by using both number and letter. You can\'t use you username again.</string>
+    <string name="valid_email">Please enter a valid email address.</string>
+    <string name="valid_agree">Please agree to terms and conditions.</string>
+    <string name="valid_age">You too young.</string>
+    <string name="send">SEND</string>
+    <string-array name="gender">
+        <item>Male</item>
+        <item>Female</item>
+    </string-array>
+    <string-array name="languageArray">
+        <item>English</item>
+        <item>France</item>
+    </string-array>
+    <string-array name="currencyArray">
+        <item>USD</item>
+        <item>Euro</item>
+    </string-array>
+    <string name="cashier">CASHIER</string>
+    <string name="balance_colon">Balance:</string>
+    <string name="balance">Balance</string>
+    <string name="place_your_bets">Place your bets</string>
+    <string name="no_more_bets">No more bets</string>
+    <string name="confirm">Confirm</string>
+    <string name="undo">Undo</string>
+    <string name="current_bet">BET</string>
+    <string name="your_bet_is_confirmed">Your bet is confirmed</string>
+    <string name="your_bet_is_under_the_limit">Your bets is under the limit</string>
+    <string name="sec">sec</string>
+    <string name="last_bet">Last Bet:</string>
+    <string name="bet">Bet:</string>
+
+    <string name="no_internet_connection">No internet connection</string>
+    <string name="try_again">Try again</string>
+    <string name="limits_menu">Limits</string>
+    <string name="history_menu">History</string>
+    <string name="settings_menu">Settings</string>
+    <string name="help_menu">Help</string>
+    <string name="lobby_menu">Lobby</string>
+    <string name="tip">TIP</string>
+    <string name="cancel">Cancel</string>
+    <string name="error">Error</string>
+
+    <string name="volume">Volume</string>
+    <string name="sound">Sound</string>
+    <string name="close">Close</string>
+    <string name="table_limits">Table limits</string>
+    <string name="min">Min</string>
+    <string name="max">Max</string>
+    <string name="player">Player</string>
+    <string name="double_player">Double Player</string>
+    <string name="tie">Tie</string>
+    <string name="banker">Banker</string>
+    <string name="double_banker">Double Banker</string>
+
+    <string name="help_content_rules">At the start of the hand, players bet on either the banker, or the player - depending on who they think will be dealt the higher hand. There is a third bet - "tie". Each hand consists of two cards to start, with a maximum of three cards dealt. Cards 2-9 are worth face value, face cards and 1 Os are worth zero, and aces are worth 1 point, suits are not important. If a player\'s cards total 8 or 9, that is considered a "natural" and no more cards are dealt. A 9 is the best possible hand. If a player\'s cards total more than 9, the cards are added up and only the right hand digit is counted. For example - if a player is holding a 7 and an 8, the total is 15, but his hand is counted as 5. A hand that totals zero (for example, 3, 7 and 10) is considered a baccarat. </string>
+    <string name="help_content_about_as">Vivo Gaming is an innovative development company specializing in bringing emerging technologies into the live gaming industries. Our technological solutions, offering land-based casinos the means to deliver the actual casino excitement to their remote clients, in a real-time interactive environment, via our consortium of video streaming and datat Bet management systems. We believe strongly in sound regulatory systems that ensure integrity and effective business practices, and we continue to promote the tremendous benefits that regulatory oversight provides. </string>
+    <string name="game_history">Game History</string>
+    <string name="player_history">Player History</string>
+    <string name="thank_you">Thank you!</string>
+    <string name="reached_table_limit">Reached table limit</string>
+    <string name="reached_box_limit">Reached box limit</string>
+    <string name="minimum_limit_is">Minimum limit is</string>
+    <string name="checking_location">Checking location...</string>
+    <string name="unable_to_identify_location">Unable to identify\nlocation</string>
+    <string name="access_declined">Access declined</string>
+    <string name="retry">Retry</string>
+    <string name="repeat_bet">Repeat Bet</string>
+    <string name="network_location">Network Location</string>
+    <string name="turn_on_network_location_question">Turn on network location?</string>
+    <string name="warning">Warning</string>
+    <string name="casino_prohibited_in_your_country">Casino prohibited in your country</string>
+    <string name="log_out_and_exit_the_app_question">Log out and exit the app?</string>
+    <string name="lobby">Lobby</string>
+    <string name="go_back_to_mail_lobby_question">Go back to main lobby?</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="network_problem_please_make_sure">Network problem, please make sure you are connected to the internet and try again</string>
+    <string name="you_have_signed_in_from_another_location">You have signed in from another location</string>
+    <string name="your_bet_could_not_be_approved">Your bet could not be approved. Please make sure to confirm your bet on time</string>
+    <string name="you_win_exclamation">You win!</string>
+    
+    <!-- add by Sam -->
+    <string name="text_footerbox_title_player_pair">P.Pair</string>
+    <string name="text_footerbox_title_player">Player</string>
+    <string name="text_footerbox_title_tie">Tie</string>
+    <string name="text_footerbox_title_banker">Banker</string>
+    <string name="text_footerbox_title_banker_pair">B.Pair</string>
+    <!-- add by Sam -->
+</resources>

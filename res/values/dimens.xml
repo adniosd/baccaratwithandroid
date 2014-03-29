@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="text_size_link">14sp</dimen>
+    <dimen name="text_edit_text_register">20sp</dimen>
+    <dimen name="padding_left_edit_text">8dp</dimen>
+    <dimen name="corner_radius_btn_cashier">5dp</dimen>
+    <dimen name="corner_radius_rl_current_bet">5dp</dimen>
+    <dimen name="text_size_menu">15dp</dimen>
+    <dimen name="text_size_tip">22dp</dimen>
+    <dimen name="margin_sliding_menu">5dp</dimen>
+    <integer name="duration_anim_open_closed_menu">50</integer>
+    <integer name="duration_anim_open_closed_menu_money">100</integer>
+	<dimen name="text_size_dialog_medium">14dp</dimen>
+    <dimen name="text_size_dialog_high">19dp</dimen>
+    <dimen name="text_size_help_content">17dp</dimen>
+    <dimen name="up_dialog_menu_name_size">23dp</dimen>
+    <dimen name="settings_text_size">23dp</dimen>
+    <dimen name="cancel_size">22dp</dimen>
+    <dimen name="limits_table_size_text">18dp</dimen>
+    <dimen name="menu_content_width">450dp</dimen>
+    <dimen name="pair_box_padding_bottom">5dp</dimen>
+    <dimen name="toast_stroke_width">1dp</dimen>
+    <dimen name="toast_corner_radius">5dp</dimen>
+    <dimen name="text_size_table_info">13sp</dimen>
+    <dimen name="text_size_dealer_name">17sp</dimen>
+    <dimen name="text_size_btn_login">13sp</dimen>
+    <dimen name="text_size_btn_register">13sp</dimen>
+    <dimen name="text_size_btn_forgot_password">13sp</dimen>
+    <dimen name="text_size_edit_text">18sp</dimen>
+    <dimen name="text_size_top_elem">19sp</dimen>
+    <dimen name="text_size_btn_logout">16sp</dimen>
+    <dimen name="text_size_btn_cashier">14sp</dimen>
+    <dimen name="text_size_balance">16sp</dimen>
+    <dimen name="text_size_current_bet">10sp</dimen>
+    <dimen name="text_size_current_bet_count">22sp</dimen>
+    <dimen name="text_size_btn_confirm">14sp</dimen>
+    <dimen name="text_size_btn_undo">14sp</dimen>
+    <dimen name="text_size_btn_repeat">14sp</dimen>
+    <dimen name="text_size_right_panel">13sp</dimen>
+    <dimen name="width_dialog_loading">300dp</dimen>
+    <dimen name="height_dialog_loading">80dp</dimen>
+    <dimen name="text_size_dialog_loading">16sp</dimen>
+    <dimen name="width_info_dialog">300dp</dimen>
+    <dimen name="text_size_dialog_title">23sp</dimen>
+    <dimen name="text_size_dialog_message">18sp</dimen>
+    <dimen name="text_size_dialog_button">18sp</dimen>
+    <dimen name="margin_bottom_title_dialog">10dp</dimen>
+    <dimen name="margin_bottom_message_dialog">16dp</dimen>
+    <dimen name="padding_bottom_dialog_bgrnd">12dp</dimen>
+    <dimen name="padding_left_dialog_bgrnd">15dp</dimen>
+    <dimen name="padding_top_dialog_bgrnd">8dp</dimen>
+    <dimen name="padding_right_dialog_bgrnd">15dp</dimen>
+    <dimen name="padding_rlRightPanel">5dp</dimen>
+    <dimen name="text_size_toast_message">20sp</dimen>
+    <dimen name="width_stroke_roulette_play_table">2dp</dimen>
+    <dimen name="padding_drawable_button">2dp</dimen>
+    <dimen name="text_size_you_win">16sp</dimen>
+    <dimen name="padding_win_notification_horizontal">12dp</dimen>
+    <dimen name="padding_win_notification_vertical">6dp</dimen>
+    
+    <!-- add by Sam -->
+	<dimen name="height_footer_box">50dp</dimen>
+    <dimen name="margin_left_bet">8dp</dimen>
+    <dimen name="margin_bottom_bet">5dp</dimen>
+    <dimen name="margin_top_bet">5dp</dimen>
+    <dimen name="margin_btn_confirm">3dp</dimen>
+    <dimen name="height_footer_whiteline">2dp</dimen>
+    <dimen name="text_size_footer_title">16dp</dimen>
+    <dimen name="text_size_footer_value">18dp</dimen>
+    <dimen name="width_footer_chip_tray">27dp</dimen>
+    <dimen name="width_footer_dashed_line">1dp</dimen>
+    <dimen name="dashWidth_footer_dashed_line">0.5dp</dimen>
+    <dimen name="dashGap_footer_dashed_line">2dp</dimen>
+    <dimen name="margin_bottom_winner_boxLine">-5dp</dimen>
+    <dimen name="padding_left_footer_chip_tray">3dp</dimen>
+    <dimen name="margin_right_chip_tray">2dp</dimen>
+    <dimen name="padding_top_foot_value">2dp</dimen>
+    <!-- add by Sam -->
+    
+    <dimen name="margin_bottom_pair_boxes">1dp</dimen>
+    <dimen name="margin_left_player_box">5dp</dimen>
+    <dimen name="margin_left_banker_pair_box">15dp</dimen>
+    <dimen name="margin_left_right_tie_box">25dp</dimen>
+    <dimen name="margin_bottom_player_banker_boxes">15dp</dimen>
+    <dimen name = "temp_player_bottom_offset">40dp</dimen>
+    <dimen name = "temp_banker_bottom_offset">35dp</dimen>
+</resources>

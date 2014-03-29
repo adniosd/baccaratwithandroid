@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout
+        android:layout_width="@dimen/width_info_dialog"
+        android:layout_height="wrap_content"
+        xmlns:android="http://schemas.android.com/apk/res/android" style="@style/BackgroundDarkGreenDialog">
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="-"
+            android:id="@+id/tvTitle_DI"
+            android:layout_centerHorizontal="true"
+            style="@style/TextViewTitleDialog"/>
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="-"
+            android:id="@+id/tvMessage_DI"
+            android:layout_below="@+id/tvTitle_DI"
+            android:layout_centerHorizontal="true" style="@style/TextViewMessageDialog"/>
+    <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/btnPositive_DI" android:layout_below="@+id/tvMessage_DI"
+            android:layout_centerHorizontal="true"
+            style="@style/ButtonGreenNarrow"
+            />
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tvBtnPositive_DI"
+            android:text="-"
+            android:layout_alignTop="@+id/btnPositive_DI"
+            android:layout_alignLeft="@+id/btnPositive_DI"
+            android:layout_alignBottom="@+id/btnPositive_DI"
+            android:layout_alignRight="@+id/btnPositive_DI" style="@style/TextViewBtnDialog"/>
+</RelativeLayout>

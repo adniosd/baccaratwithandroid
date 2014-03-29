@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" android:background="@drawable/background_screens">
+    <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            style="@style/TopElementDarkGreen" android:id="@+id/rlUpper_SCT">
+
+        <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/log_out"
+                android:id="@+id/btnLogout_SCT"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="20dp" style="@style/ButtonLinkTransparent" android:minHeight="0dp"
+                android:paddingTop="3dp" android:paddingBottom="3dp" android:textSize="@dimen/text_size_btn_logout"/>
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/welcome"
+                android:id="@+id/tvWelcome_SCT"
+                android:gravity="center_horizontal"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/text_size_top_elem"
+                android:textStyle="bold" android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/btnLogout_SCT"/>
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="482"
+                android:id="@+id/tvBalance_SCT"
+                android:textColor="@android:color/white" android:textStyle="bold"
+                android:layout_centerVertical="true"
+                android:gravity="center_horizontal"
+                android:layout_marginRight="15dp" android:layout_alignParentRight="true"
+                android:textSize="@dimen/text_size_balance"/>
+        <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/cashier"
+                android:id="@+id/btnCashier_SCT" android:layout_alignParentRight="true"
+                style="@style/ButtonCashier" android:layout_centerVertical="true" android:layout_marginRight="20dp"
+                android:visibility="invisible"/>
+    </RelativeLayout>
+    <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/rlUpper_SCT">
+        <android.support.v4.view.ViewPager
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/vp_page_SCT"
+                android:paddingBottom="30dp" android:paddingTop="5dp">
+        </android.support.v4.view.ViewPager>
+        <com.vivogaming.livecasino.screens.choose_table.indicator.CirclePageIndicator
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/indicator_SCT" android:layout_alignLeft="@+id/vp_page_SCT"
+                android:layout_alignBottom="@+id/vp_page_SCT" android:padding="12dp">
+        </com.vivogaming.livecasino.screens.choose_table.indicator.CirclePageIndicator>
+    </RelativeLayout>
+</RelativeLayout>

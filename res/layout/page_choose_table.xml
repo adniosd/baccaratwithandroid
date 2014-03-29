@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" android:gravity="center"
+    android:orientation="horizontal"
+    >
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" android:gravity="center"
+        android:layout_weight="19"
+        android:orientation="vertical"></LinearLayout>
+    <!--<RelativeLayout-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:padding="10dp" android:background="#70042229">-->
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" android:gravity="center"
+        android:layout_weight="13"
+        android:orientation="vertical"
+        android:id="@+id/llTableLobby_PCT"
+        android:padding="10dp" android:background="#70042229">
+        <RelativeLayout
+            android:layout_height="match_parent"
+            android:layout_width="match_parent"
+            android:layout_weight="6">
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/ivDealerImage_PCT"
+            android:background="@color/bgrnd_dark_green"
+            android:layout_weight="4"
+                />
+
+            <!--/>-->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="id: 0"
+            android:layout_weight="10"
+            android:id="@+id/tvTableId_PCT" android:textColor="#0d8400"
+            android:layout_marginTop="10dp" android:textStyle="bold" android:layout_marginLeft="10dp"
+            android:visibility="invisible"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="YESIFER G"
+            android:id="@+id/tvDealerNamel_PCT"
+            android:layout_weight="10"
+            android:background="#40000000"
+            android:textColor="#ffffff" android:textSize="@dimen/text_size_dealer_name"
+            android:paddingLeft="8dp" android:layout_alignBottom="@+id/ivDealerImage_PCT"
+            android:layout_alignRight="@+id/ivDealerImage_PCT" android:layout_alignLeft="@+id/ivDealerImage_PCT"/>
+        </RelativeLayout>
+        <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" android:layout_weight="8">
+            <LinearLayout
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:id="@+id/llDataAndHistory_PCT" android:layout_above="@+id/btnPlay_PCT"
+            android:layout_alignParentTop="true">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/rlTableData_PCS"
+                android:orientation="vertical"
+                android:layout_marginRight="10dp"
+                android:layout_gravity="center"
+                android:gravity="center_vertical" android:layout_weight="1" android:paddingLeft="15dp">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Baccarat"
+                    android:id="@+id/tvGameName_PCT" android:textStyle="bold"
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/text_size_table_info"/>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="VIP"
+                    android:id="@+id/tvLimitName_PCT" android:textColor="@android:color/white"
+                    android:layout_below="@+id/tvGameName_PCT"
+                    android:textSize="@dimen/text_size_table_info"/>
+                <LinearLayout
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_weight="20" android:layout_below="@+id/tvLimitName_PCT">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/limits"
+                        android:id="@+id/textView" android:layout_below="@+id/tvLimitName_PCT"
+                        android:textColor="@android:color/white"
+                        android:gravity="center_vertical"
+                        android:textSize="@dimen/text_size_table_info"/>
+                    <TextView android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=" 10-40" android:id="@+id/tvLimits_PCT"
+
+                        android:textColor="@color/gold_text"
+                        android:layout_below="@+id/tvLimitName_PCT" android:singleLine="false"
+                        android:layout_toRightOf="@+id/textView"
+                        android:textSize="@dimen/text_size_table_info"/>
+                </LinearLayout>
+            </RelativeLayout>
+            <RelativeLayout android:layout_width="match_parent" android:layout_height="match_parent"
+                android:gravity="center"
+                android:id="@+id/rtHistory_PCT"
+                android:layout_toRightOf="@+id/rlTableData_PCS"
+                android:layout_alignTop="@+id/rlTableData_PCS"
+                android:layout_weight="1">
+                <com.vivogaming.livecasino.screens.game.history.CustomViewScore
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/cvsHistory_PCT" android:layout_centerInParent="true"/>
+            </RelativeLayout>
+        </LinearLayout>
+            <ImageButton android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:id="@+id/btnPlay_PCT"
+                style="@style/ButtonGreenWide" android:layout_centerHorizontal="true"
+                android:layout_alignParentBottom="true" android:layout_marginTop="8dp"/>
+            <TextView android:layout_width="match_parent" android:layout_height="match_parent"
+                android:text="@string/play"
+                android:layout_alignRight="@+id/btnPlay_PCT" android:layout_alignBottom="@+id/btnPlay_PCT"
+                android:layout_alignLeft="@+id/btnPlay_PCT" android:layout_alignTop="@+id/btnPlay_PCT"
+                android:gravity="center_vertical|center_horizontal" android:textColor="@android:color/white"
+                android:textStyle="bold" android:textSize="@dimen/text_size_table_info"/>
+        </RelativeLayout>
+    </LinearLayout>
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" android:gravity="center"
+        android:layout_weight="19"
+        android:orientation="vertical"></LinearLayout>
+    <!--</RelativeLayout>-->
+</LinearLayout>

@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/background_screens"
+        >
+
+    <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:gravity="center_vertical"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:background="@drawable/background_top_dark_green"
+            android:id="@+id/upMenuLimits_SML">
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/limits_menu"
+                android:id="@+id/tvLimits_SML"
+                android:layout_centerHorizontal="true"
+                android:layout_alignParentTop="true"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/up_dialog_menu_name_size"
+                android:layout_alignTop="@+id/btnCloseForLimits_SML"
+                android:layout_alignBottom="@+id/btnCloseForLimits_SML"
+                android:gravity="center_vertical|center_horizontal"
+                android:textIsSelectable="false" android:singleLine="false"/>
+        <Button
+                android:layout_width="wrap_content"
+                android:layout_height="35dp"
+                android:text="@string/close"
+                android:id="@+id/btnCloseForLimits_SML"
+                android:layout_alignParentRight="true"
+                style="@style/ButtonLinkTransparent"
+                android:textSize="@dimen/cancel_size"
+                android:textStyle="bold"
+                android:layout_alignParentTop="true"
+                android:paddingRight="5dp"/>
+    </RelativeLayout>
+    <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:shrinkColumns="*"
+            android:stretchColumns="*"
+            android:layout_below="@id/upMenuLimits_SML"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="40dp"
+            android:id="@+id/tableLimits_SML">
+            <TableRow
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:padding="10dp"
+                    android:gravity="center_horizontal">
+
+                <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/table_limits"
+                        android:id="@+id/tvLimitsTable_SML"
+                        android:textColor="@android:color/white"
+                        android:textSize="@dimen/limits_table_size_text"
+                        android:gravity="center_horizontal"/>
+            </TableRow>
+
+        <TableRow
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:padding="5dp">
+            <TextView
+                    android:id="@+id/tvName_SML"
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/limits_table_size_text"
+                    />
+            <TextView
+                    android:text="@string/min"
+                    android:id="@+id/tvMin_SML"
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/limits_table_size_text"
+                    android:gravity="center_horizontal"/>
+            <TextView
+                    android:text="@string/max"
+                    android:id="@+id/tvMax_SML"
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/limits_table_size_text"
+                    android:gravity="center_horizontal"/>
+        </TableRow>
+        <TableRow android:layout_height="wrap_content" android:layout_width="match_parent" android:padding="5dp"
+                >
+            <TextView android:id="@+id/tvPlayer_SML" android:textColor="@android:color/white"
+                      android:textSize="@dimen/limits_table_size_text" android:layout_width="wrap_content"
+                      android:layout_height="wrap_content" android:text="@string/player"/>
+            <TextView android:id="@+id/tvPlayerMin_SML" android:textColor="@android:color/white"
+                      android:textSize="@dimen/limits_table_size_text" android:gravity="center_horizontal"
+                      android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            <TextView android:id="@+id/tvPlayerMax_SML" android:textColor="@android:color/white"
+                      android:textSize="@dimen/limits_table_size_text" android:gravity="center_horizontal"
+                      android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+        </TableRow>
+        <TableRow android:layout_height="wrap_content" android:layout_width="match_parent" android:padding="5dp"
+                >
+            <TextView android:id="@+id/tvBanker_SML" android:textColor="@android:color/white"
+                      android:textSize="@dimen/limits_table_size_text" android:layout_width="wrap_content"
+                      android:layout_height="wrap_content" android:text="@string/banker"/>
+            <TextView android:id="@+id/tvBankerMin_SML" android:textColor="@android:color/white"
+                      android:textSize="@dimen/limits_table_size_text" android:gravity="center_horizontal"
+                      android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            <TextView android:id="@+id/tvBankerMax_SML" android:textColor="@android:color/white"
+                      android:textSize="@dimen/limits_table_size_text" android:gravity="center_horizontal"
+                      android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+        </TableRow>
+        <TableRow android:layout_height="wrap_content" android:layout_width="match_parent" android:padding="5dp"
+                >
+            <TextView android:id="@+id/tvTie_SML" android:textColor="@android:color/white"
+                      android:textSize="@dimen/limits_table_size_text" android:layout_width="wrap_content"
+                      android:layout_height="wrap_content" android:text="@string/tie"/>
+            <TextView android:id="@+id/tvTieMin_SML" android:textColor="@android:color/white"
+                      android:textSize="@dimen/limits_table_size_text" android:gravity="center_horizontal"
+                      android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            <TextView android:id="@+id/tvTieMax_SML" android:textColor="@android:color/white"
+                      android:textSize="@dimen/limits_table_size_text" android:gravity="center_horizontal"
+                      android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+        </TableRow>
+        <TableRow android:layout_height="wrap_content" android:layout_width="match_parent" android:padding="5dp"
+                >
+            <TextView android:id="@+id/tvDPlayer_SML" android:textColor="@android:color/white"
+                      android:textSize="@dimen/limits_table_size_text" android:layout_width="wrap_content"
+                      android:layout_height="wrap_content" android:text="@string/double_player"/>
+            <TextView android:id="@+id/tvDPlayerMin_SML" android:textColor="@android:color/white"
+                      android:textSize="@dimen/limits_table_size_text" android:gravity="center_horizontal"
+                      android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            <TextView android:id="@+id/tvDPlayerMax_SML" android:textColor="@android:color/white"
+                      android:textSize="@dimen/limits_table_size_text" android:gravity="center_horizontal"
+                      android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+        </TableRow>
+        <TableRow android:layout_height="wrap_content" android:layout_width="match_parent" android:padding="5dp"
+                  android:id="@+id/tableRow4">
+            <TextView android:id="@+id/tvDBanker_SML" android:textColor="@android:color/white"
+                      android:textSize="@dimen/limits_table_size_text" android:layout_width="wrap_content"
+                      android:layout_height="wrap_content" android:text="@string/double_banker"/>
+            <TextView android:id="@+id/tvDBankerMin_SML" android:textColor="@android:color/white"
+                      android:textSize="@dimen/limits_table_size_text" android:gravity="center_horizontal"
+                      android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            <TextView android:id="@+id/tvDBankerMax_SML" android:textColor="@android:color/white"
+                      android:textSize="@dimen/limits_table_size_text" android:gravity="center_horizontal"
+                      android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+        </TableRow>
+
+    </TableLayout>
+</RelativeLayout>
